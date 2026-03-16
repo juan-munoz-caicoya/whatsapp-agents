@@ -2,7 +2,17 @@
   "permissions": {
     "allow": [
       "Bash(cd C:/Users/Usuario/whatsapp-agents && mkdir -p core/prompts core/flows clients/autoescuela-malaga/research clients/autoescuela-malaga/prompts clients/autoescuela-malaga/flows research docs/decisions)",
-      "Bash(cd C:/Users/Usuario/whatsapp-agents && touch core/prompts/.gitkeep core/flows/.gitkeep clients/autoescuela-malaga/research/.gitkeep clients/autoescuela-malaga/prompts/.gitkeep clients/autoescuela-malaga/flows/.gitkeep research/.gitkeep docs/decisions/.gitkeep)"
+      "Bash(cd C:/Users/Usuario/whatsapp-agents && touch core/prompts/.gitkeep core/flows/.gitkeep clients/autoescuela-malaga/research/.gitkeep clients/autoescuela-malaga/prompts/.gitkeep clients/autoescuela-malaga/flows/.gitkeep research/.gitkeep docs/decisions/.gitkeep)",
+      "Bash(cd C:/Users/Usuario/whatsapp-agents && rm agents/researcher-strategy.md)",
+      "Bash(cd C:/Users/Usuario/whatsapp-agents && rm -f agents/researcher-strategy.md agents/reviewer.md)",
+      "WebSearch",
+      "WebFetch(domain:www.ine.es)",
+      "WebFetch(domain:developers.facebook.com)",
+      "WebFetch(domain:chatproia.com)",
+      "WebFetch(domain:chatarmin.com)",
+      "WebFetch(domain:modelosdeplandenegocios.com)",
+      "WebFetch(domain:soulia.io)",
+      "Bash(git add:*)"
     ]
   }
 }
