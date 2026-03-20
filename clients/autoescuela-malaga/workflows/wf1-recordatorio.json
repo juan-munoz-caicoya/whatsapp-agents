@@ -160,7 +160,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const results = [];\n  for (const item of $input.all()) {\n    const t = \"Hola \" + item.json.alumno_nombre;\n    const t2 = t + \"\\n\\nRecordatorio: manana tienes clase practica.\";\n    const t3 = t2 + \"\\n\\nFecha: \" + item.json.fecha + \", \" + item.json.hora + \"h\";\n    const t4 = t3 + \"\\nInstructor: \" + item.json.instructor;\n    const t5 = t4 + \"\\nRecogida: \" + item.json.punto_recogida;\n    const texto = t5 + \"\\nTrae: DNI y gafas si las necesitas\\n\\nPuedes asistir?\";\n    results.push({json: {messaging_product: \"whatsapp\", to: item.json.alumno_telefono, type: \"interactive\", alumno_telefono:\n  item.json.alumno_telefono, alumno_nombre: item.json.alumno_nombre, interactive: {type: \"button\", body: {text: texto}, action: {buttons:    \n  [{type: \"reply\", reply: {id: \"confirmar\", title: \"Confirmo\"}}, {type: \"reply\", reply: {id: \"cancelar\", title: \"No puedo ir\"}}]}}}});       \n  }\n  return results;"
+        "jsCode": "const results = [];\n  for (const item of $input.all()) {\n    const n = item.json.alumno_nombre;\n    const f = item.json.fecha;\n    const h = item.json.hora;\n    const i = item.json.instructor;\n    const p = item.json.punto_recogida;\n    const tel = item.json.alumno_telefono;\n    const texto = \"Hola \" + n + \"! 👋\\n\\n📅 Recordatorio de tu clase practica:\\n\\n🕐 \" + f + \" a las \" + h + \"h\\n🚗 Instructor: \" + i + \"\\n📍 Recogida: \" + \n  p + \"\\n\\n📋 Recuerda traer tu DNI y gafas si las necesitas.\\n\\nPuedes asistir?\";\n    results.push({json: {messaging_product: \"whatsapp\", to: tel, type: \"interactive\", alumno_telefono: tel, alumno_nombre: n, interactive:   \n  {type: \"button\", body: {text: texto}, action: {buttons: [{type: \"reply\", reply: {id: \"confirmar\", title: \"Confirmo\"}}, {type: \"reply\",     \n  reply: {id: \"cancelar\", title: \"No puedo ir\"}}]}}}});\n  }\n  return results;"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -396,7 +396,7 @@
     "binaryMode": "separate",
     "availableInMCP": false
   },
-  "versionId": "414f8c40-cc3f-471e-91fe-8ceb19f6d232",
+  "versionId": "22765284-0c9d-42f2-824c-29a69a3c6dc5",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "c5a8f655b373d3566f2c51b4a9020e759f139b9a9c42b7b320059648f7ea37e3"
