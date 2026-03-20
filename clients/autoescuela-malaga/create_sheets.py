@@ -154,6 +154,34 @@ style_header(ws_log, len(log_headers))
 auto_width(ws_log)
 
 # ============================================================
+# HOJA 4: lista_espera
+# ============================================================
+ws_espera = wb.create_sheet("lista_espera")
+
+espera_headers = [
+    "alumno_nombre",
+    "alumno_telefono",
+    "horario_preferido",
+    "prioridad",
+]
+
+espera_data = [
+    ["Ana Martin", "+34600999000", "manana", 1],
+    ["Diego Fernandez", "+34600111333", "cualquiera", 2],
+]
+
+for col_idx, header in enumerate(espera_headers, 1):
+    ws_espera.cell(row=1, column=col_idx, value=header)
+
+for row_idx, row_data in enumerate(espera_data, 2):
+    for col_idx, value in enumerate(row_data, 1):
+        ws_espera.cell(row=row_idx, column=col_idx, value=value)
+
+style_header(ws_espera, len(espera_headers))
+style_data(ws_espera, len(espera_data) + 1, len(espera_headers))
+auto_width(ws_espera)
+
+# ============================================================
 # Guardar
 # ============================================================
 output_path = Path(__file__).parent / "autoescuela_demo.xlsx"
