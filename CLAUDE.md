@@ -63,6 +63,7 @@ Es la prioridad número uno. Construir es fácil, conseguir clientes no.
 - `/product` — priorización, definición de problema, validación
 - `/researcher` — análisis de entrevistas, insights de clientes
 - `/comercial` — ICP, pricing, adquisición de clientes, distribución
+- `/n8n` — diseño, revisión y optimización de workflows en n8n
 
 ## Estructura del repo
 - `core/` — flujos, prompts y docs reutilizables entre clientes

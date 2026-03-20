@@ -152,8 +152,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1248,
-        -192
+        1472,
+        -240
       ],
       "id": "2cb19edd-aba7-4b65-bf2c-8e34651861a3",
       "name": "Code in JavaScript1"
@@ -297,8 +297,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        1456,
-        -192
+        1664,
+        -240
       ],
       "id": "4725c11a-569f-40b9-a50e-2f6bd1e32997",
       "name": "Update row in sheet",
@@ -308,6 +308,40 @@
           "name": "Google Sheets OAuth2 API"
         }
       }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "a96b0a0c-2a5b-4a38-8d25-d1195b410c35",
+              "leftValue": "={{ $json.messaging_product }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        1248,
+        -192
+      ],
+      "id": "4a3821ee-85bc-44e6-8744-e5b08f9689c3",
+      "name": "If2"
     }
   ],
   "pinData": {},
@@ -360,7 +394,7 @@
       "main": [
         [
           {
-            "node": "Code in JavaScript1",
+            "node": "If2",
             "type": "main",
             "index": 0
           }
@@ -388,6 +422,17 @@
           }
         ]
       ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
@@ -396,7 +441,7 @@
     "binaryMode": "separate",
     "availableInMCP": false
   },
-  "versionId": "22765284-0c9d-42f2-824c-29a69a3c6dc5",
+  "versionId": "255c063c-7aec-4ed2-8757-91b387397dac",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "c5a8f655b373d3566f2c51b4a9020e759f139b9a9c42b7b320059648f7ea37e3"
