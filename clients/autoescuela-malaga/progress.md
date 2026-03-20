@@ -8,8 +8,8 @@
 - [x] Paso 1.3: Sandbox configurado — sender: +15551776545
 - [x] Paso 1.4: Token permanente (skip, usando temporal)
 - [x] Paso 1.5: Phone Number ID: 1052519621273741, Token: ✅
-- [ ] Paso 2: Google Sheets con datos fake
-- [ ] Paso 3: Workflow 1 — Recordatorio
+- [x] Paso 2: Google Sheets con datos fake (agenda, disponibilidad, log)
+- [x] Paso 3: Workflow 1 — Recordatorio (funcionando, exportado a workflows/wf1-recordatorio.json)
 - [ ] Paso 4: Workflow 2 — Procesar respuesta
 - [ ] Paso 5: Workflow 3 — Reagendar
 - [ ] Paso 6: Test end-to-end
